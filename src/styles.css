@@ -9,6 +9,7 @@ body {
     font-family: Russo One;
     color: #333;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     background-color: rgb(2, 197, 197);
     box-sizing: border-box;
@@ -30,8 +31,9 @@ body {
 }
 
 #drum-pad {
-    align-self: flex-start;
     display: inline-flex;
+    justify-content: center;
+    align-content: center;
     flex-wrap: wrap;
     margin: auto;
     width: 20em;
@@ -94,11 +96,25 @@ input {
 #power, #bank {
     border: 1px solid #333;
     border-radius: 20%;
-    padding: 10px;
-    width: 10px;
+    padding: .6em;
     margin: 5px auto 0 auto;
 }
 
 #power:active, #bank:active {
     box-shadow: inset .4px .5px 2px .1px #333;
+}
+
+@media screen and (max-width: 580px) {
+    #root {
+        font-size: 13px;
+    }
+
+    .btn {
+        font-size: 12px;
+    }
+
+    #drum-machine {
+        height: 40em;
+        width: 25em;
+    }
 }
